@@ -9,7 +9,7 @@ includeLag <- function(dataset,VAR,var.agg,lags=1){
 
 
 
-fdiff <- function(dataset,VAR,var.agg){
+fdiff <- function(dataset,VAR,var.agg ){
  datasetlag <- subset(dataset[,c(VAR,var.agg)],dataset$Anno<max(dataset$Anno))
  datasetlag$Anno <- datasetlag$Anno+1
  dataset <- plyr::join(dataset,datasetlag,by=var.agg)

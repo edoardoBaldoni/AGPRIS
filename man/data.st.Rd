@@ -8,7 +8,7 @@
 A STFDF
 }
 \source{
-\url{Authors' elaborations based on the Italian FADN data provided by CREA (https://www.crea.gov.it/). Authors' elaborations based on rainfall data taken from Funk et al. (2014, ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CHIRPS-2.0/docs/USGS-DS832.CHIRPS.pdf)}
+\url{Authors' elaborations based on the Italian FADN data provided by CREA (https://www.crea.gov.it/). Authors' elaborations based on rainfall data taken from Funk et al. (2014, ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CHIRPS-2.0/docs/USGS-DS832.CHIRPS.pdf).}
 }
 \usage{
 data.st
