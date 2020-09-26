@@ -42,6 +42,7 @@ A list with two objects. The first object is the estimates table. The second obj
 This function estimates a space time linear model according to the specified formula. It implements the BCML (or BCLSDV) estimator as in Elhorst (2010) \url{doi:10.1016/j.regsciurbeco.2010.03.003}.
 }
 \examples{
+\dontrun{
 library(maxLik)
 library(matrixcalc)
 library(rgdal)
@@ -54,6 +55,6 @@ est_bcml = bcml(dataset = sd[[1]],yearStart = 3,yearEnd = 9,
                 var.agg = 'Cod_Provincia',eq = Y~X1,
                   estimation = 'analytical',corrBIAS = TRUE,WMAT = sd[[2]])
 est_bcml
-
+}
 
 }

@@ -45,6 +45,7 @@ A list with two objects. The first object is the STFDF with the simulated data. 
 This function simulates a space-time stochastic process according to the defined spatial structure and input paramters. It simulates data of a dynamic spatial lag model. It includes one exogenous variable and a fixed-effect correlated with the exogenous variable.
 }
 \examples{
+\dontrun{
 library(spacetime)
 library(sp)
 library(spdep)
@@ -58,5 +59,6 @@ dev.new()
 plot(sel_regioni)
 points(coordinates(sd[[1]]@sp))
 plot(mat2listw(sd[[2]]),coordinates(sd[[1]]@sp),add=TRUE,col=2)
+}
 
 }

@@ -40,6 +40,7 @@ fdiff <- function(dataset,VAR,var.agg){
 #'
 #' @return A list with two objects. The first object is the estimates table. The second object is the log-likelihood evaluated at its maximum
 #' @examples
+#' \dontrun{
 #' library(maxLik)
 #' library(matrixcalc)
 #' library(rgdal)
@@ -52,7 +53,7 @@ fdiff <- function(dataset,VAR,var.agg){
 #'                 var.agg = 'Cod_Provincia',eq = Y~X1,
 #'                   estimation = 'analytical',corrBIAS = TRUE,WMAT = sd[[2]])
 #' est_bcml
-#'
+#' }
 #'
 #' @export
 bcml <- function(
@@ -708,9 +709,10 @@ effectsST <- function(dataset,
 #'
 #' @return The estimates tables
 #' @examples 
+#' \dontrun{
 #' library(rgdal)
 #' set.seed(123)
-#' sd = sim_data_fe(dataset=regsamp,N=50,T=6,
+#' sd = sim_data_fe(dataset=regsamp,N=50,T=8,
 #'                 spatial = 80,Tau = -0.2,Rho = 0.4,
 #'                 Beta = 2,sdDev = 2,startingT = 10,
 #'                 LONGLAT = TRUE);sd[[1]]$X2 = stats::rnorm(nrow(sd[[1]]@data))
@@ -719,6 +721,7 @@ effectsST <- function(dataset,
 #'               wmat = sd[[2]],var.agg = c('Anno','Cod_Provincia'),
 #'               m = 10)
 #' est_mml
+#' }
 #'
 #' @export
 mml = function(Rho,
@@ -1330,6 +1333,7 @@ effectsST <- function(dataset,
 #'
 #' @return A list with two objects. The first object is the STFDF with the simulated data. The second object is the spatial weight matrix
 #' @examples
+#' \dontrun{
 #' library(spacetime)
 #' library(sp)
 #' library(spdep)
@@ -1343,7 +1347,8 @@ effectsST <- function(dataset,
 #' plot(sel_regioni)
 #' points(coordinates(sd[[1]]@sp))
 #' plot(mat2listw(sd[[2]]),coordinates(sd[[1]]@sp),add=TRUE,col=2)
-#' 
+#' }
+#'
 #' @export
 sim_data_fe = function(dataset,N,T,spatial=100,
  Tau=-0.14,Rho=0.67,Beta=1,sdDev=5,

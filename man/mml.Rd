@@ -26,9 +26,10 @@ The estimates tables
 This function estimates a space time linear model according to the specified formula using the MML (or MML/BCLSDV) estimator as in Elhorst (2010) \url{doi:10.1016/j.regsciurbeco.2010.03.003}. The estimator maximizes a full-log-likelihood function where the parameter of spatial dependence is constrained.
 }
 \examples{
+\dontrun{
 library(rgdal)
 set.seed(123)
-sd = sim_data_fe(dataset=regsamp,N=50,T=6,
+sd = sim_data_fe(dataset=regsamp,N=50,T=8,
                 spatial = 80,Tau = -0.2,Rho = 0.4,
                 Beta = 2,sdDev = 2,startingT = 10,
                 LONGLAT = TRUE);sd[[1]]$X2 = stats::rnorm(nrow(sd[[1]]@data))
@@ -37,5 +38,6 @@ est_mml = mml(dataset = sd[[1]]@data,Rho = 0.4,
               wmat = sd[[2]],var.agg = c('Anno','Cod_Provincia'),
               m = 10)
 est_mml
+}
 
 }
